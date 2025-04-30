@@ -1,0 +1,9 @@
+.\docker_run_db.sh
+
+docker build -t meu-so .
+
+docker run -it --network minha-rede meu-so bash
+
+service mysql start
+
+mysql  -u root -h  mysql-db -psenha

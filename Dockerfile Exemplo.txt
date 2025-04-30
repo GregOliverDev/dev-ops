@@ -1,0 +1,14 @@
+*Dockerfile*
+FROM node:16 
+WORKDIR /app_aula_4
+COPY / /app_aula_4
+RUN npm install
+CMD [ "node", "app.js" ]
+EXPOSE 3000
+
+
+*Build*
+docker build -t aula_4 . 
+
+*Run*
+docker run -p 3000:3000 --name=app_npm aula_4  

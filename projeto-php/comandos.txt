@@ -1,0 +1,8 @@
+mkdir projeto-php 
+cd projeto-php
+code .
+
+docker build --no-cache -t servidor-php .
+
+docker run -v D:\Estudo\DevOps\projeto-php:/the/www/html -p 8000:80 servidor-php
+docker run -p 8000:80 servidor-php
